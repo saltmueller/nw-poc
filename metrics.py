@@ -58,9 +58,9 @@ def send_metrics():
         result += 'net bits sent: %s\n' % tx_bits 
 
         client.publish("linux/metrics", result)
-        client.loop()
+        client.loop(0)
 
-        time.sleep(1)
+        # time.sleep(0.1)
 
 
 if __name__ == '__main__':   
